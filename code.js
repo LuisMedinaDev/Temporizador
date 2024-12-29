@@ -8,10 +8,10 @@ let isPlaying = false;
 let intervalId = null;
 temporizador.value = '00:00';
 
-// Crear un objeto Audio para el sonido
+
 const alarmSound = new Audio('sonido.mp3');
 
-// Función para formatear el valor del temporizador
+
 function formatTimeInput(value) {
     let cleanValue = value.replace(/[^0-9]/g, '').padStart(4, '0').slice(-4);
     const minutos = cleanValue.slice(0, 2);
@@ -19,16 +19,17 @@ function formatTimeInput(value) {
     return `${minutos}:${segundos}`;
 }
 
-// Actualizar temporizador al escribir
+
 temporizador.addEventListener('input', () => {
     temporizador.value = formatTimeInput(temporizador.value);
 });
 
 function togglePlay() {
     botonReiniciar.style.display = 'block';
-
     if (temporizador.value === '00:00') {
-        resetTimer();
+        alert('Por favor, establece un tiempo en el temporizador antes de iniciar.');
+        botonReiniciar.style.display = 'none';
+        return;
     }
 
     if (isPlaying) {
@@ -56,7 +57,7 @@ function startTimer() {
         let [minutos, segundos] = temporizador.value.split(':').map(Number);
 
         if (minutos === 0 && segundos === 0) {
-            alarmSound.play(); // Reproducir el sonido al llegar a 00:00
+            alarmSound.play();
             resetTimer();
             return;
         }
