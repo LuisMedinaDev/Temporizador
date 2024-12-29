@@ -1,0 +1,134 @@
+body {
+    background: #060a14;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contenedor {
+    min-height: 450px;
+    width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: #101b2f;
+    padding: 20PX;
+    border-radius: 20PX;
+}
+.feacture-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.name {
+    padding: 10px 22px;
+    border-radius: 30px;
+    background-color: #34517d;
+    color: #c6d2e7;
+    font-size: 15px;
+    align-self: flex-start;
+    letter-spacing: 1px;
+    transition: .100s;
+    cursor: pointer;
+}
+
+.c-p-completa {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    transition: .100s;
+    cursor: pointer;
+}
+.c-p-completa:hover {
+    background-color: #34517d5c;
+}
+.p-completa {
+    height: 25px;
+    fill: #a8c7fa;
+    margin: auto;
+}
+.contenido {
+    height: 300px;
+    width: 300px;
+    border: 7px solid #1e2841a3;
+    border-radius: 50%;
+    background-color: #1e28413f;
+    box-shadow: 0 5px 20px 5px #0000000b;
+    display: flex;
+    
+}
+
+.temporizador {
+    margin: auto;
+    font-size: 45px;
+    color: #b0b9c2;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.temporizador::placeholder {
+    color: #b0b9c2;
+}
+.botones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.boton {
+    background-color: #a8c7fa;
+    border: none;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.botonPlay {
+    background-color: #34517d65;
+}
+
+.reiniciar {
+    display: none;
+}
+.pausaColorBody {
+    background-color: #1f1f1f;
+}
+.pausaColorContenedor {
+    background-color: #353028;
+}
+.pausaColorBoton {
+background-color: #7e5700;
+color: #e4ca98;
+}
+.pausaColorContenido {
+    background-color: #3c362b8f;
+    border: 7px solid #474036;
+}
+.pausaColor-p-completa {
+    fill: #d1a14b;
+}
+.pausaColorTemporizador {
+    color: #ffeed9;
+  
+}
+
+@media (width <= 768px) {
+    .contenedor {
+        width: 85%;
+
+    }
+
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="code.js" defer></script> 
+    <title>Document</title>
+</head>
+<body>
+    <!-- Reto Semanal #3: Temporizador Interactivo
+
+Descripción: Crea una aplicación web que permita al usuario configurar un temporizador con un diseño simple y funcional.
+
+Requisitos:
+
+1. Interfaz de Usuario:
+
+Un campo para ingresar el tiempo en minutos y segundos.
+
+Un botón para iniciar el temporizador.
+
+Un botón para pausar o reanudar el temporizador.
+
+Un botón para reiniciar el temporizador.
+
+2. Funcionalidad:
+
+El temporizador debe mostrar el tiempo restante en formato MM:SS.
+
+Al llegar a 0, debe mostrar un mensaje como "¡Tiempo terminado!".
+
+Permitir al usuario pausar y reanudar el temporizador.
+
+3. Extras (Opcional):
+
+Añade una animación o efecto visual al contar el tiempo.
+
+Emite un sonido o vibración cuando el tiempo termine (puedes usar la API de Audio de JavaScript).
+
+Guarda el tiempo configurado en localStorage para restaurarlo si se recarga la página.
+
+> Fecha de entrega: 28/12/2024
+-->
+<section class="contenedor">
+    <div class="feacture-1">
+        <span class="name">✔ Temporizador</span>
+        <div class="c-p-completa" id="fullscreenButton">
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="p-completa"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg>
+        </div>
+    
+    </div>
+    
+    <article class="contenido">
+        <input class="temporizador">
+    </article>
+    <div class="botones">
+        <button class="play boton">▶</button>
+        <button class="reiniciar boton">🔄</button>
+    </div>
+    
+</section>
+</body>
+</html>
