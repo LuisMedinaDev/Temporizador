@@ -9,7 +9,7 @@ let intervalId = null;
 temporizador.value = '00:00';
 
 
-const alarmSound = new Audio('sonido.mp3');
+const alarmSound = new Audio('sonido3.mp3');
 
 
 function formatTimeInput(value) {
