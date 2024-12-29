@@ -8,6 +8,9 @@ let isPlaying = false;
 let intervalId = null;
 temporizador.value = '00:00';
 
+// Crear un objeto Audio para el sonido
+const alarmSound = new Audio('sonido.mp3');
+
 // Función para formatear el valor del temporizador
 function formatTimeInput(value) {
     let cleanValue = value.replace(/[^0-9]/g, '').padStart(4, '0').slice(-4);
@@ -53,6 +56,7 @@ function startTimer() {
         let [minutos, segundos] = temporizador.value.split(':').map(Number);
 
         if (minutos === 0 && segundos === 0) {
+            alarmSound.play(); // Reproducir el sonido al llegar a 00:00
             resetTimer();
             return;
         }
@@ -104,3 +108,4 @@ fullscreenButton.addEventListener('click', () => {
 
 botonPlay.addEventListener('click', togglePlay);
 botonReiniciar.addEventListener('click', resetTimer);
+
